@@ -24,6 +24,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_user')->constrained()->cascadeOnDelete();
             $table->timestamps();
 
+
             $table->foreign('id_kategori_jurnal')->references('id')->on('kategori_jurnal');
             $table->foreign('id_user')->references('id')->on('users');
         });
