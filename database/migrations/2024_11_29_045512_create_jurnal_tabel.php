@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('keyword');
             $table->integer('halaman');
             $table->date('date_publish');
-            $table->string('id_kategori_jurnal');
+            $table->unsignedBigInteger('id_kategori_jurnal')->constrained()->cascadeOnDelete();
             $table->string('file');
-            $table->string('id_user');
+            $table->unsignedBigInteger('id_user')->constrained()->cascadeOnDelete();
             $table->timestamps();
 
             $table->foreign('id_kategori_jurnal')->references('id')->on('kategori_jurnal');
