@@ -1,3 +1,4 @@
+<x-app-layout>
 @extends('layouts.app')
 
 @section('content')
@@ -39,3 +40,4 @@
         </tbody>
     </table>
 @endsection
+</x-app-layout>

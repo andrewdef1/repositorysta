@@ -10,8 +10,8 @@ class DashboardController extends Controller
     public function index()
     {
         // Hitung total jurnal yang sudah dipublikasikan
-        $totalJurnalPublish = Jurnal::where('status', 'published')->count();
+        // $totalJurnalPublish = Jurnal::where('status', 'published')->count();
 
-        return view('dashboard', compact('totalJurnalPublish'));
+        return view('dashboard');
     }
 }
