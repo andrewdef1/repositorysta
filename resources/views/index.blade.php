@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+@extends('layouts.app')
+
+@section('content')
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,11 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
+            color: #333;
         }
 
         /* Header Styles */
@@ -25,6 +32,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .header-left {
@@ -53,13 +62,23 @@
             width: 2px;
             height: 40px;
             background-color: white;
-            margin: 0 20px;
+            margin: 0 20px;            
         }
 
         .header-right h1 {
             font-size: 24px;
             font-weight: bold;
-            margin: 0;
+            margin: 0;           
+        }
+
+        .header-right a {
+            color: white
+            text-decoration: none;
+            margin-left: 20px;           
+        }
+
+        .header-right a:hover {         
+            text-decoration: underline;                     
         }
 
         /* Search Container Styles */
@@ -119,7 +138,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -160,6 +179,30 @@
             padding-top: 10px;
             font-size: 0.9em;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .header-right {
+            margin-top: 10px;
+        }
+
+        .search-container select,
+        .search-container input[type="text"] {
+            width: 100%;
+        }
+
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        }
+
     </style>
 </head>
 <body>
@@ -167,7 +210,7 @@
 <header>
     <div class="header-container">
         <div class="header-left">
-            <img src="img/logo-stiper.png" alt="Logo STIPER Santo Thomas">
+            <img src="{{ asset('img/logo-stiper.png') }}" alt="Logo STIPER Santo Thomas">
             <h2>STIPER SANTO THOMAS AQUINAS JAYAPURA</h2>
         </div>
         <div class="header-right">
@@ -177,7 +220,7 @@
     </div>
 </header>
 
-<div class="search-container">
+<div class="search-container">                                            
     <h2>Pencarian Katalog</h2>
     <form action="#" method="GET">
         <select name="category">
@@ -212,3 +255,4 @@
 
 </body>
 </html>
+@endsection
