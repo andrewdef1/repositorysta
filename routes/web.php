@@ -18,7 +18,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('index');
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
 <html lang="en">
@@ -62,23 +62,23 @@
             width: 2px;
             height: 40px;
             background-color: white;
-            margin: 0 20px;            
+            margin: 0 20px;
         }
 
         .header-right h1 {
             font-size: 24px;
             font-weight: bold;
-            margin: 0;           
+            margin: 0;
         }
 
         .header-right a {
             color: white
             text-decoration: none;
-            margin-left: 20px;           
+            margin-left: 20px;
         }
 
-        .header-right a:hover {         
-            text-decoration: underline;                     
+        .header-right a:hover {
+            text-decoration: underline;
         }
 
         /* Search Container Styles */
@@ -220,7 +220,7 @@
     </div>
 </header>
 
-<div class="search-container">                                            
+<div class="search-container">
     <h2>Pencarian Katalog</h2>
     <form action="#" method="GET">
         <select name="category">
