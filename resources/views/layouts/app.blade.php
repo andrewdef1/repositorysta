@@ -8,8 +8,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon -->
-    <link href="" rel="icon">
-    <link rel="shortcut icon" href="{{ asset('') }}" />
+    <link href="{{ asset('img/logo-stiper.png') }}" rel="icon">
+    <link rel="shortcut icon" href="{{ asset('img/logo-stiper.png') }}" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <!-- Styles -->

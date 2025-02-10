@@ -17,9 +17,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'index']);
+
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth', 'verified'])

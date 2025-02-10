@@ -1,28 +1,23 @@
 @extends('layouts.master')
 
 @section('content')
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REPOSITORY STIPER SANTO THOMAS AQUINAS JAYAPURA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
+<style>
+    /* Ensure the body takes the full height */
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
 
-        /* Header Styles */
-        header {
+    /* Wrapper to push footer down */
+    .content-wrapper {
+        flex: 1;
+    }
+
+            /* Header Styles */
+            header {
             background-color: #5c2d91; /* Warna ungu */
             color: white;
             padding: 20px;
@@ -126,110 +121,86 @@
             background-color: #e09e00;
         }
 
-        /* Footer Styles */
-        footer {
-            background-color: #5c2d91;
-            color: white;
-            padding: 20px 10px;
-            font-size: 0.9em;
-        }
+    /* Footer styling */
+    footer {
+        background-color: #5c2d91;
+        color: white;
+        padding: 20px 10px;
+        font-size: 0.9em;
+    }
 
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-        .footer-links h4 {
-            margin-bottom: 10px;
-            font-size: 1em;
-            font-weight: 600;
-        }
+    .footer-links h4 {
+        margin-bottom: 10px;
+        font-size: 1em;
+        font-weight: 600;
+    }
 
-        .footer-links ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-        .footer-links ul li {
-            margin-bottom: 5px;
-        }
+    .footer-links ul li {
+        margin-bottom: 5px;
+    }
 
-        .footer-links ul li a {
-            color: #ffdd00;
-            text-decoration: none;
-        }
+    .footer-links ul li a {
+        color: #ffdd00;
+        text-decoration: none;
+    }
 
-        .footer-links ul li a:hover {
-            text-decoration: underline;
-        }
+    .footer-links ul li a:hover {
+        text-decoration: underline;
+    }
 
-        .contact-info {
-            text-align: left;
-            line-height: 1.5;
-        }
+    .contact-info {
+        text-align: left;
+        line-height: 1.5;
+    }
 
-        .copyright {
-            text-align: center;
-            border-top: 1px solid #fff; /* Garis tipis di atas */
-            margin-top: 10px;
-            padding-top: 10px;
-            font-size: 0.9em;
-        }
+    .copyright {
+        text-align: center;
+        border-top: 1px solid #fff;
+        margin-top: 10px;
+        padding-top: 10px;
+        font-size: 0.9em;
+    }
+</style>
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .header-container {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .header-right {
-            margin-top: 10px;
-        }
-
-        .search-container select,
-        .search-container input[type="text"] {
-            width: 100%;
-        }
-
-        .footer-container {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        }
-
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="header-container">
-        <div class="header-left">
-            <img src="{{ asset('img/logo-stiper.png') }}" alt="Logo STIPER Santo Thomas">
-            <h2>STIPER SANTO THOMAS AQUINAS JAYAPURA</h2>
+<div class="content-wrapper">
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <img src="{{ asset('img/logo-stiper.png') }}" alt="Logo STIPER Santo Thomas">
+                <h2>STIPER SANTO THOMAS AQUINAS JAYAPURA</h2>
+            </div>
+            <div class="header-right">
+                <div class="line"></div>
+                <h1>REPOSITORY</h1>
+            </div>
         </div>
-        <div class="header-right">
-            <div class="line"></div>
-            <h1>REPOSITORY</h1>
-        </div>
+    </header>
+
+    <div class="search-container">
+        <h2>Pencarian Repository</h2>
+        <form action="#" method="GET">
+            <select name="category">
+                <option value="">-- Semua Kategori --</option>
+            </select>
+            <input type="text" name="query" placeholder="Masukkan kata kunci...">
+            <button type="submit">Cari</button>
+        </form>
     </div>
-</header>
-
-<div class="search-container">
-    <h2>Pencarian Katalog</h2>
-    <form action="#" method="GET">
-        <select name="category">
-            <option value="">-- Semua Kategori --</option>
-        </select>
-        <input type="text" name="query" placeholder="Masukkan kata kunci...">
-        <button type="submit">Cari</button>
-    </form>
-</div>
+</div> <!-- End of content-wrapper -->
 
 <footer>
     <div class="footer-container">
@@ -253,6 +224,4 @@
     </div>
 </footer>
 
-</body>
-</html>
 @endsection
