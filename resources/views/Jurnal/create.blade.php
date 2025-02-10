@@ -37,24 +37,48 @@
             @csrf
 
 
-            <label for="name">Nama Jurnal <span style="color:red;">*</span></label>
-            <input required value="{{old('name')}}" class="form-control {{$errors->first('name') ? " is-invalid" : ""}}" placeholder="Nama Jurnal" type="text" name="name" id="name" />
+            <label for="judul">Judul <span style="color:red;">*</span></label>
+            <input required value="{{old('judul')}}" class="form-control {{$errors->first('judul') ? " is-invalid" : ""}}" placeholder="Judul" type="text" name="judul" id="judul" />
             <div class="invalid-feedback">
-              {{$errors->first('name')}}
+              {{$errors->first('judul')}}
             </div>
             <br>
-            <label for="tanggal_publish">Tanggal Publish</label>
-            <input class="form-control {{$errors->first('tmt_cpns') ? "is-invalid" : ""}}" placeholder="Tanggal Publish" type="date" name="tanggal_publish" id="tanggal_publish" />
-            <div class="invalid-feedback">
-              {{$errors->first('tanggal_publish')}}
-            </div>
-            <br>
-            <label for="deskripsi">Deskripsi <span style="color:red;">*</span></label>
-          <textarea required placeholder="Deskripsi, (minimal 3 kata, maksimal 200 kata)" class="form-control {{$errors->first('deskripsi') ? "is-invalid" : ""}}" name="deskripsi" id="deskripsi" style="height: 200px;"></textarea>
+            <label for="abstrak">Abstrak <span style="color:red;">*</span></label>
+          <textarea required placeholder="Abstrak, (minimal 3 kata, maksimal 200 kata)" class="form-control {{$errors->first('abstrak') ? "is-invalid" : ""}}" name="abstrak" id="abstrak" style="height: 200px;"></textarea>
           <div class="invalid-feedback">
-            {{$errors->first('deskripsi')}}
+            {{$errors->first('abstrak')}}
           </div>
           <br>
+            <label for="author">Author <span style="color:red;">*</span></label>
+            <input required value="{{old('author')}}" class="form-control {{$errors->first('author') ? " is-invalid" : ""}}" placeholder="Author" type="text" name="author" id="author" />
+            <div class="invalid-feedback">
+              {{$errors->first('author')}}
+            </div>
+            <br>
+            <label for="keyword">Keyword <span style="color:red;">*</span></label>
+            <input required value="{{old('keyword')}}" class="form-control {{$errors->first('keyword') ? " is-invalid" : ""}}" placeholder="Keyword" type="text" name="keyword" id="keyword" />
+            <div class="invalid-feedback">
+              {{$errors->first('keyword')}}
+            </div>
+            <br>
+            <label for="halaman">Halaman <span style="color:red;">*</span></label>
+            <input required value="{{old('halaman')}}" class="form-control {{$errors->first('halaman') ? " is-invalid" : ""}}" placeholder="Halaman" type="text" name="halaman" id="halaman" />
+            <div class="invalid-feedback">
+              {{$errors->first('halaman')}}
+            </div>
+            <br>
+            <label for="date_publish">Tanggal Publish</label>
+            <input class="form-control {{$errors->first('date_publish') ? "is-invalid" : ""}}" placeholder="Tanggal Publish" type="date" name="date_publish" id="date_publish" />
+            <div class="invalid-feedback">
+              {{$errors->first('date_publish')}}
+            </div>
+            <br>
+            <label for="file">File <span style="color:red;">*</span></label>
+            <input required class="form-control {{$errors->first('file') ? " is-invalid" : ""}}"  type="file" name="file" id="file" />
+            <div class="invalid-feedback">
+              {{$errors->first('file')}}
+            </div>
+            <br>
           <br>
 
             <input class="btn btn-primary" type="submit" value="Save" />

@@ -18,11 +18,13 @@
           <table class="table table-striped table-bordered data table-hover">
             <thead align="center">
                 <tr>
-                    <th><b>No.</b></th>
-                    <th><b>Nama</b></th>
-                    <th><b>Golongan</b></th>
-                    <th><b>Ruangan</b></th>
-                    <th><b>Urutan</b></th>
+                    <th><b>judul</b></th>
+                    <th><b>abstrak</b></th>
+                    <th><b>author</b></th>
+                    <th><b>keyword</b></th>
+                    <th><b>halaman</b></th>
+                    <th><b>date_publish</b></th>
+                    <th><b>file</b></th>
 
                     <th><b>Action</b></th>
                   </tr>
